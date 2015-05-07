@@ -1,6 +1,4 @@
-// Bash script to help get all the possible familiars
-//for i in {1..34}; do wget http://flightrising.com/main.php?p=bestiary\&tab=familiars\&page=$i ; done
-//more main.php\?p\=bestiary\&tab\=familiars\&page\=* | grep "/images/cms/familiar/art/"
+
 
 var familiars = [];
 var moneyMade = 0;
@@ -41,7 +39,7 @@ function attachFamiliar(familiarID)
 	});
 }
 
-function bondJamesbond(id)
+function bond(id)
 {
 
 	$('body').append('<div id="bonding"></div>');
@@ -104,7 +102,7 @@ function bondNext() {
 	fam = familiars[0];
 	detachFamiliar();
 	attachFamiliar(fam);
-	bondJamesbond(fam);
+	bond(fam);
 	 var end  = new Date();
 	 var time = end.getTime() - start.getTime();
 	console.log("Took: "+time);
