@@ -109,9 +109,9 @@ function bondNext() {
 	familiars.shift();
 	
 	if (familiars.length != 0) {
-		setTimeout('bondNext()', rand.nextInt(2000) + 1250);
+		setTimeout('bondNext()', Math.floor((Math.random() * 2000) + 1250));
 	} else {
-		setTimeout('cleanUp()', rand.nextInt(2000) + 1250);	
+		setTimeout('cleanUp()', Math.floor((Math.random() * 2000) + 1250));	
 	}
 }
 
@@ -131,5 +131,5 @@ if (dragonID == undefined) {
 if (confirm("You have "+familiars.length+" familiars, this should take approximately "+familiars.length*2+" seconds to complete. Do not interrupt it. Press F12 and click the console tab to monitor the process. Are you sure you want to do this?")) {
 	
 	var startAll = new Date();
-	setTimeout('bondNext()', rand.nextInt(2000) + 1250);
+	setTimeout('bondNext()', Math.floor((Math.random() * 2000) + 1250));
 }
